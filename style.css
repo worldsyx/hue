@@ -1,0 +1,467 @@
+/* ====================================================================
+   HUENING KAI PORTFOLIO - CUSTOM STYLING & ANIMATIONS
+   Palet: Black (#050507, #0b0c10), Crimson Red (#e11d48, #ff1a40), White, Slate/Gray
+   ==================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap');
+
+:root {
+  --color-bg: #070709;
+  --color-crimson: #e11d48;
+  --color-crimson-bright: #ff2a55;
+  --color-crimson-glow: rgba(225, 29, 72, 0.45);
+  --color-card-bg: rgba(18, 18, 22, 0.7);
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: #f3f4f6;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, rgba(225, 29, 72, 0.06) 0%, transparent 60%),
+              radial-gradient(circle at 80% 60%, rgba(225, 29, 72, 0.03) 0%, transparent 50%),
+              #070709;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-crimson);
+}
+
+/* Custom Font Helpers */
+.font-display {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom Cursor */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #ff2a55;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+  box-shadow: 0 0 10px rgba(255, 42, 85, 0.8);
+}
+
+.custom-cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(225, 29, 72, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, transform 0.15s ease-out;
+}
+
+body.cursor-hover .custom-cursor-outline {
+  width: 55px;
+  height: 55px;
+  border-color: #ff2a55;
+  background-color: rgba(225, 29, 72, 0.15);
+  box-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
+}
+
+/* Loading Screen Animation */
+#loading-screen {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Hero Section Pulsing Glow behind Huening Kai */
+.hero-glow-pulse {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.42) 0%, rgba(225, 29, 72, 0.18) 45%, transparent 70%);
+  filter: blur(55px);
+  animation: heartPulse 3.8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.92);
+    opacity: 0.65;
+  }
+  35% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.02);
+    opacity: 0.75;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* Large PORTFOLIO Text in Hero Background */
+.hero-bg-portfolio-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(5rem, 16vw, 15rem);
+  font-weight: 900;
+  line-height: 0.85;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(225, 29, 72, 0.45);
+  background: linear-gradient(180deg, rgba(225, 29, 72, 0.28) 0%, rgba(225, 29, 72, 0.04) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0.85;
+}
+
+/* Micro-interaction: Rotating Plus Icon */
+.plus-rotate-90 {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+.group:hover .plus-rotate-90,
+.header-collab-btn:hover .plus-rotate-90 {
+  transform: rotate(90deg);
+  color: #ff2a55;
+  text-shadow: 0 0 10px rgba(255, 42, 85, 0.7);
+}
+
+.plus-rotate-45 {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
+}
+.hero-point-item:hover .plus-rotate-45 {
+  transform: rotate(45deg);
+  background-color: var(--color-crimson);
+  border-color: #ff2a55;
+}
+.hero-point-item:hover .point-text {
+  color: #ffffff;
+}
+
+/* Discography Card Styling & Micro-interactions */
+.disco-card-container {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.disco-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(22, 22, 28, 0.85) 0%, rgba(10, 10, 13, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.45s ease, 
+              border-color 0.45s ease;
+  aspect-ratio: 1 / 1.08;
+}
+
+.disco-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.3) 0%, transparent 70%);
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.disco-card-container:hover .disco-card,
+.disco-card-container.is-playing .disco-card,
+.disco-card-container.active-card .disco-card {
+  transform: translateY(-10px);
+  border-color: rgba(225, 29, 72, 0.95);
+  box-shadow: 0 15px 35px -5px rgba(225, 29, 72, 0.45), 0 0 25px rgba(225, 29, 72, 0.35);
+}
+
+.disco-card-container:hover .disco-card::before,
+.disco-card-container.is-playing .disco-card::before,
+.disco-card-container.active-card .disco-card::before {
+  opacity: 0.85;
+}
+
+.disco-arrow {
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.disco-card-container:hover .disco-arrow,
+.disco-card-container.is-playing .disco-arrow,
+.disco-card-container.active-card .disco-arrow {
+  transform: translateX(6px);
+  color: #ff2a55;
+  text-shadow: 0 0 10px rgba(255, 42, 85, 0.8);
+}
+
+/* Track Playing Badge on Card */
+.track-play-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(225, 29, 72, 0.2);
+  border: 1px solid rgba(255, 42, 85, 0.5);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #ff2a55;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.track-play-badge.hidden-badge {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+}
+
+.track-play-badge.active-badge {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
+/* Career Highlights Hover Effect */
+.career-item {
+  transition: transform 0.35s ease;
+}
+.career-year {
+  transition: text-shadow 0.35s ease, color 0.35s ease;
+}
+.career-title {
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+.career-item:hover .career-year {
+  color: #ff2a55;
+  text-shadow: 0 0 12px rgba(255, 42, 85, 0.8);
+}
+.career-item:hover .career-title {
+  transform: translateX(6px);
+  color: #ffffff;
+}
+
+/* Artistic Disciplines Pills */
+.discipline-pill {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #9ca3af;
+}
+.discipline-pill:hover {
+  background-color: rgba(225, 29, 72, 0.22);
+  border-color: var(--color-crimson);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(225, 29, 72, 0.3);
+  transform: translateY(-2px);
+}
+
+/* The Musical Journey Timeline */
+.timeline-track {
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-progress-fill {
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  width: 2px;
+  height: 0%;
+  background: linear-gradient(180deg, #ff2a55 0%, #e11d48 100%);
+  box-shadow: 0 0 8px rgba(225, 29, 72, 0.8);
+  transition: height 0.2s ease-out;
+}
+
+.timeline-node {
+  transition: all 0.3s ease;
+}
+.timeline-dot {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+  background-color: #ff2a55;
+  box-shadow: 0 0 12px rgba(255, 42, 85, 0.9);
+}
+
+/* Quote Section Shimmer */
+.quote-shimmer {
+  display: inline-block;
+  background: linear-gradient(90deg, #e11d48 0%, #ff809b 50%, #e11d48 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerLight 3.5s infinite linear;
+}
+
+@keyframes shimmerLight {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Contact Button Swipe Fill */
+.btn-contact-swipe {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.btn-contact-swipe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #e11d48 0%, #be123c 100%);
+  z-index: -1;
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: inherit;
+}
+.btn-contact-swipe:hover::before {
+  width: 100%;
+}
+.btn-contact-swipe:hover {
+  border-color: #ff2a55;
+  box-shadow: 0 0 20px rgba(225, 29, 72, 0.4);
+}
+.btn-contact-swipe:hover .contact-arrow {
+  transform: translateX(6px);
+}
+
+/* Social Media Cards */
+.social-card {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+.social-card:hover .social-icon {
+  transform: scale(1.12);
+  color: #ff2a55;
+}
+.social-card:hover .social-text {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+/* Music Player & Equalizer */
+.equalizer-bar {
+  width: 3px;
+  background: linear-gradient(180deg, #ff2a55 0%, #f97316 100%);
+  border-radius: 2px;
+  animation: equalize 1.2s infinite ease-in-out;
+  transform-origin: bottom;
+}
+.equalizer-bar:nth-child(1) { height: 16px; animation-delay: 0.1s; animation-duration: 0.9s; }
+.equalizer-bar:nth-child(2) { height: 24px; animation-delay: 0.3s; animation-duration: 1.1s; }
+.equalizer-bar:nth-child(3) { height: 12px; animation-delay: 0.2s; animation-duration: 0.8s; }
+.equalizer-bar:nth-child(4) { height: 20px; animation-delay: 0.4s; animation-duration: 1.3s; }
+.equalizer-bar:nth-child(5) { height: 15px; animation-delay: 0.15s; animation-duration: 1.0s; }
+
+.equalizer-paused .equalizer-bar {
+  animation-play-state: paused;
+  height: 4px !important;
+  opacity: 0.5;
+}
+
+@keyframes equalize {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Blinking Indicator Dot */
+.blinking-dot {
+  animation: blinkDot 1.8s infinite ease-in-out;
+}
+@keyframes blinkDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+}
+
+/* Toast Notification */
+#toast-notification {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9990;
+}
+#toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}

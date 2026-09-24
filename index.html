@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUENING KAI — Lead Vocalist & Multi-Instrumentalist</title>
+  <meta name="description" content="Official portfolio and artistic showcase of Huening Kai (TOMORROW X TOGETHER) - Lead Vocalist, Multi-Instrumentalist, and Songwriter.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crimson: {
+              DEFAULT: '#e11d48',
+              bright: '#ff1a40',
+              dark: '#9f1239'
+            },
+            dark: {
+              900: '#070709',
+              850: '#0c0d12',
+              800: '#14141a',
+              700: '#1e1f26'
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#070709] text-gray-100 antialiased selection:bg-crimson selection:text-white">
+
+  <!-- 1. LOADING SCREEN (1 Detik Fade Out sesuai PRD) -->
+  <div id="loading-screen" class="fixed inset-0 z-[10000] bg-[#070709] flex flex-col items-center justify-center">
+    <div class="relative flex flex-col items-center">
+      <div class="text-rose-600 font-mono text-xs tracking-[0.3em] uppercase mb-3 animate-pulse">TXT // HYBE</div>
+      <h1 class="font-display font-black text-4xl sm:text-6xl text-white tracking-widest drop-shadow-[0_0_25px_rgba(225,29,72,0.8)]">
+        HUENING KAI
+      </h1>
+      <div class="w-16 h-0.5 bg-rose-600 mt-4 rounded-full"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor-dot hidden md:block"></div>
+  <div class="custom-cursor-outline hidden md:block"></div>
+
+  <!-- MAIN CONTAINER (Max width container centered) -->
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-14 py-6 md:py-10">
+
+    <!-- ====================================================================
+         A. HEADER (Top Bar)
+         ==================================================================== -->
+    <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 py-3 border-b border-white/[0.06]">
+      <div>
+        <h2 class="text-rose-600 text-xs sm:text-[13px] font-bold tracking-[0.25em] uppercase">
+          TOMORROW X TOGETHER
+        </h2>
+        <p class="text-gray-400 text-[11px] tracking-[0.2em] font-medium uppercase mt-0.5">
+          VOCALIST & MULTI-INSTRUMENTALIST
+        </p>
+      </div>
+
+      <div>
+        <a href="#connect-section" class="action-collab-btn header-collab-btn group inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-gray-300 hover:text-white transition-colors duration-300">
+          <span>AVAILABLE FOR COLLABORATION</span>
+          <span class="plus-rotate-90 text-rose-500 font-bold text-base leading-none inline-block">+</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         B. HERO SECTION
+         ==================================================================== -->
+    <section id="hero-section" class="relative mt-8 sm:mt-12 lg:mt-16 pb-16 lg:pb-24 overflow-hidden">
+      
+      <!-- Latar Belakang Teks Raksasa "PORTFOLIO" dengan Parallax Effect -->
+      <div class="hero-bg-portfolio-text select-none">
+        PORTFOLIO
+      </div>
+
+      <!-- Pulsing Red Heartbeat Glow di belakang foto Huening Kai -->
+      <div class="hero-glow-pulse"></div>
+
+      <!-- Grid Hero Content -->
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+        
+        <!-- Sisi Kiri: Profil & Deskripsi -->
+        <div class="lg:col-span-5 order-2 lg:order-1 pt-4 lg:pt-0">
+          <!-- Cursive greeting -->
+          <p class="font-script text-3xl sm:text-4xl text-rose-500 mb-0 font-bold transform -rotate-2 select-none">
+            Hello, I'm
+          </p>
+
+          <!-- Nama Utama -->
+          <h1 class="font-display font-black text-6xl sm:text-7xl xl:text-8xl tracking-tight leading-[0.92] text-white uppercase mt-1 mb-6">
+            HUENING<br>KAI
+          </h1>
+
+          <!-- Tagline dengan aksen garis merah -->
+          <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold tracking-[0.16em] uppercase text-gray-200 mb-5">
+            <span class="w-6 h-[2px] bg-rose-600 inline-block"></span>
+            <span>LEAD VOCALIST / MULTI-INSTRUMENTALIST</span>
+          </div>
+
+          <!-- Deskripsi Emosional -->
+          <p class="text-gray-400 text-sm sm:text-[15px] leading-relaxed max-w-md mb-8 font-light">
+            A versatile performer blending rock spirit, expressive vocals, and instrumental mastery. Pushing artistic boundaries with TOMORROW X TOGETHER through piano, guitar, and emotive musical storytelling.
+          </p>
+
+          <!-- Lokasi / Agensi -->
+          <div class="flex items-center gap-2 text-xs tracking-widest uppercase text-gray-400 font-medium">
+            <svg class="w-3.5 h-3.5 text-rose-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>BASED IN SEOUL, SOUTH KOREA / BIGHIT MUSIC</span>
+          </div>
+        </div>
+
+        <!-- Tengah: Foto Utama Huening Kai (Aset Transparan) -->
+        <div class="lg:col-span-4 order-1 lg:order-2 flex justify-center relative">
+          <div class="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-none flex justify-center">
+            <img 
+              src="hue-removebg-preview.png" 
+              alt="Huening Kai - TOMORROW X TOGETHER" 
+              class="hero-image relative z-10 w-full max-h-[560px] object-contain drop-shadow-[0_20px_45px_rgba(225,29,72,0.35)] transition-transform duration-200 pointer-events-none"
+            >
+          </div>
+        </div>
+
+        <!-- Sisi Kanan: Daftar 4 Poin dengan Icon Plus -->
+        <div class="lg:col-span-3 order-3 flex flex-col justify-center space-y-7 pl-0 lg:pl-4">
+          
+          <!-- Poin 1 -->
+          <div class="hero-point-item group flex items-start gap-3.5 cursor-pointer">
+            <div class="plus-rotate-45 w-7 h-7 rounded-full border border-rose-500/40 bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-rose-500 font-semibold text-sm leading-none">+</span>
+            </div>
+            <p class="point-text text-xs sm:text-[13px] leading-snug text-gray-400 transition-colors duration-300">
+              Turning raw soundscapes into unforgettable emotional journeys.
+            </p>
+          </div>
+
+          <!-- Poin 2 -->
+          <div class="hero-point-item group flex items-start gap-3.5 cursor-pointer">
+            <div class="plus-rotate-45 w-7 h-7 rounded-full border border-rose-500/40 bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-rose-500 font-semibold text-sm leading-none">+</span>
+            </div>
+            <p class="point-text text-xs sm:text-[13px] leading-snug text-gray-400 transition-colors duration-300">
+              Vocal Performance & Wide Emotional Range
+            </p>
+          </div>
+
+          <!-- Poin 3 -->
+          <div class="hero-point-item group flex items-start gap-3.5 cursor-pointer">
+            <div class="plus-rotate-45 w-7 h-7 rounded-full border border-rose-500/40 bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-rose-500 font-semibold text-sm leading-none">+</span>
+            </div>
+            <p class="point-text text-xs sm:text-[13px] leading-snug text-gray-400 transition-colors duration-300">
+              Multi-Instrumentalist (Piano, Guitar, Drums)
+            </p>
+          </div>
+
+          <!-- Poin 4 -->
+          <div class="hero-point-item group flex items-start gap-3.5 cursor-pointer">
+            <div class="plus-rotate-45 w-7 h-7 rounded-full border border-rose-500/40 bg-rose-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-rose-500 font-semibold text-sm leading-none">+</span>
+            </div>
+            <p class="point-text text-xs sm:text-[13px] leading-snug text-gray-400 transition-colors duration-300">
+              Global Stage Presence & Stadium Impact
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         C. SELECTED DISCOGRAPHY (Kartu Proyek)
+         ==================================================================== -->
+    <section class="mt-8 lg:mt-16 pb-16 lg:pb-24 border-t border-white/[0.06] pt-12">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-8 sm:mb-10">
+        <div>
+          <span class="text-rose-600 text-xs font-bold tracking-[0.25em] uppercase block mb-1">
+            SELECTED WORKS
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-wide uppercase">
+            SELECTED DISCOGRAPHY
+          </h2>
+        </div>
+        <div class="text-gray-500 text-xs font-semibold tracking-[0.2em] uppercase">
+          CURATED HIGHLIGHTS
+        </div>
+      </div>
+
+      <!-- 4 Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="disco-card-container cursor-pointer group" data-track="0">
+          <div class="disco-card p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-rose-500 text-[10px] tracking-[0.2em] font-bold uppercase">
+                ALBUM SHOWCASE
+              </span>
+              <span class="track-play-badge hidden-badge" id="badge-track-0">
+                <svg class="w-2.5 h-2.5 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> PLAYING
+              </span>
+            </div>
+            <div class="text-center px-2 py-6">
+              <h3 class="font-display font-bold text-sm tracking-widest text-white leading-snug uppercase">
+                THE NAME CHAPTER:<br>FREEFALL
+              </h3>
+            </div>
+            <div class="text-gray-400 text-[11px] tracking-wider uppercase text-center">
+              HYBE / BIGHIT
+            </div>
+          </div>
+          <!-- Outside Bottom Details -->
+          <div class="mt-4 px-1">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-gray-200">The Name Chapter: FREEFALL</span>
+              <span class="disco-arrow text-rose-500 font-bold inline-block">01 &rarr;</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">Growing Pain &bull; Track 01</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="disco-card-container cursor-pointer group" data-track="1">
+          <div class="disco-card p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-rose-500 text-[10px] tracking-[0.2em] font-bold uppercase">
+                2ND STUDIO ALBUM
+              </span>
+              <span class="track-play-badge hidden-badge" id="badge-track-1">
+                <svg class="w-2.5 h-2.5 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> PLAYING
+              </span>
+            </div>
+            <div class="text-center px-2 py-6">
+              <h3 class="font-display font-bold text-sm tracking-widest text-white leading-snug uppercase">
+                THE CHAOS CHAPTER:<br>FREEZE
+              </h3>
+            </div>
+            <div class="text-gray-400 text-[11px] tracking-wider uppercase text-center">
+              HYBE / BIGHIT
+            </div>
+          </div>
+          <!-- Outside Bottom Details -->
+          <div class="mt-4 px-1">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-gray-200">The Chaos Chapter: FREEZE</span>
+              <span class="disco-arrow text-rose-500 font-bold inline-block">02 &rarr;</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">0X1=LOVESONG (feat. Seori)</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="disco-card-container cursor-pointer group" data-track="2">
+          <div class="disco-card p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-rose-500 text-[10px] tracking-[0.2em] font-bold uppercase">
+                6TH MINI ALBUM
+              </span>
+              <span class="track-play-badge hidden-badge" id="badge-track-2">
+                <svg class="w-2.5 h-2.5 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> PLAYING
+              </span>
+            </div>
+            <div class="text-center px-2 py-6">
+              <h3 class="font-display font-bold text-sm tracking-widest text-white leading-snug uppercase">
+                MINISODE 3:<br>TOMORROW
+              </h3>
+            </div>
+            <div class="text-gray-400 text-[11px] tracking-wider uppercase text-center">
+              Credits / Production
+            </div>
+          </div>
+          <!-- Outside Bottom Details -->
+          <div class="mt-4 px-1">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-gray-200">minisode 3: TOMORROW</span>
+              <span class="disco-arrow text-rose-500 font-bold inline-block">03 &rarr;</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">Deja Vu &bull; Title Track</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="disco-card-container cursor-pointer group" data-track="3">
+          <div class="disco-card p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="text-rose-500 text-[10px] tracking-[0.2em] font-bold uppercase">
+                SPECIAL STAGE
+              </span>
+              <span class="track-play-badge hidden-badge" id="badge-track-3">
+                <svg class="w-2.5 h-2.5 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> PLAYING
+              </span>
+            </div>
+            <div class="text-center px-2 py-6">
+              <h3 class="font-display font-bold text-sm tracking-widest text-white leading-snug uppercase">
+                YOUNGBLOOD<br>(LIVE BAND SET)
+              </h3>
+            </div>
+            <div class="text-gray-400 text-[11px] tracking-wider uppercase text-center">
+              Tour Exclusive
+            </div>
+          </div>
+          <!-- Outside Bottom Details -->
+          <div class="mt-4 px-1">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-gray-200">Youngblood (Live)</span>
+              <span class="disco-arrow text-rose-500 font-bold inline-block">04 &rarr;</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">5SOS Cover &bull; Solo Instrumental</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         D, E, F: THREE COLUMNS SECTION
+         (Milestones & Recognition / The Musical Journey / Quote Section)
+         ==================================================================== -->
+    <section class="mt-6 pb-20 border-t border-white/[0.06] pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+        
+        <!-- KOLOM 1: MILESTONES & RECOGNITION (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col justify-between">
+          <div>
+            <h2 class="font-display font-extrabold text-lg sm:text-xl text-white tracking-widest uppercase mb-1">
+              MILESTONES & RECOGNITION
+            </h2>
+            <p class="text-rose-600 text-xs font-bold tracking-[0.2em] uppercase mb-7">
+              CAREER HIGHLIGHTS
+            </p>
+
+            <!-- Career Highlights List -->
+            <div class="space-y-6">
+              <!-- Item 1 -->
+              <div class="career-item group cursor-pointer border-b border-white/[0.04] pb-4">
+                <div class="flex justify-between items-baseline gap-2">
+                  <h4 class="career-title text-sm font-semibold text-gray-200 group-hover:text-white">
+                    Debut with TOMORROW X TOGETHER
+                  </h4>
+                  <span class="career-year text-rose-600 font-mono text-xs font-bold">2019</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Rookie Grand Slam Champion & Global Launch</p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="career-item group cursor-pointer border-b border-white/[0.04] pb-4">
+                <div class="flex justify-between items-baseline gap-2">
+                  <h4 class="career-title text-sm font-semibold text-gray-200 group-hover:text-white">
+                    Billboard 200 #1 & Lollapalooza Headliner
+                  </h4>
+                  <span class="career-year text-rose-600 font-mono text-xs font-bold">2021-23</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Historic Festival Stages & Worldwide Arenas</p>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="career-item group cursor-pointer border-b border-white/[0.04] pb-4">
+                <div class="flex justify-between items-baseline gap-2">
+                  <h4 class="career-title text-sm font-semibold text-gray-200 group-hover:text-white">
+                    Global Dome Tour & Solo Instrumental Acts
+                  </h4>
+                  <span class="career-year text-rose-600 font-mono text-xs font-bold">2024-26</span>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Live acoustic sets, rock reimaginations & co-production</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artistic Disciplines Badges/Pills -->
+          <div class="mt-8">
+            <h5 class="text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400 mb-3">
+              ARTISTIC DISCIPLINES
+            </h5>
+            <div class="flex flex-wrap gap-2">
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                PIANO
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                ACOUSTIC & ELECTRIC GUITAR
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                DRUMS
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                SONGWRITING & COMPOSITION
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                VOCAL HARMONY
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                STAGE PERFORMANCE
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                RECORDING PRODUCTION
+              </span>
+              <span class="discipline-pill px-3 py-1.5 rounded-full text-[11px] font-medium tracking-wider uppercase cursor-pointer">
+                LANGUAGES: KOREAN, ENGLISH, MANDARIN
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- KOLOM 2: THE MUSICAL JOURNEY (lg:col-span-4) -->
+        <div id="musical-journey-timeline" class="lg:col-span-4 relative pl-2 lg:pl-4">
+          <h2 class="font-display font-extrabold text-lg sm:text-xl text-white tracking-widest uppercase mb-8">
+            THE MUSICAL JOURNEY
+          </h2>
+
+          <div class="relative pl-7 space-y-9">
+            <!-- Continuous Track & Progress Fill -->
+            <div class="timeline-track"></div>
+            <div class="timeline-progress-fill"></div>
+
+            <!-- Step 01 -->
+            <div class="timeline-item group relative">
+              <div class="timeline-dot absolute -left-7 top-1 w-3.5 h-3.5 rounded-full border border-rose-500 bg-rose-500"></div>
+              <h4 class="text-sm font-bold text-white tracking-wider uppercase mb-1.5">
+                01. INSPIRATION
+              </h4>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">
+                Exploring rock, indie, alternative and pop textures to form evocative melodies.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="timeline-item group relative">
+              <div class="timeline-dot absolute -left-7 top-1 w-3.5 h-3.5 rounded-full border border-rose-500 bg-transparent"></div>
+              <h4 class="text-sm font-bold text-white tracking-wider uppercase mb-1.5">
+                02. PRACTICE & HARMONY
+              </h4>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">
+                Perfecting vocal resonance, piano chord voicing, and multi-layer guitar riffs.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="timeline-item group relative">
+              <div class="timeline-dot absolute -left-7 top-1 w-3.5 h-3.5 rounded-full border border-rose-500 bg-transparent"></div>
+              <h4 class="text-sm font-bold text-white tracking-wider uppercase mb-1.5">
+                03. PERFORMANCE
+              </h4>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">
+                Electrifying stadium stages worldwide with high adrenaline and rock vitality.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="timeline-item group relative">
+              <div class="timeline-dot absolute -left-7 top-1 w-3.5 h-3.5 rounded-full border border-rose-500 bg-transparent"></div>
+              <h4 class="text-sm font-bold text-white tracking-wider uppercase mb-1.5">
+                04. CONNECTION
+              </h4>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">
+                Uniting MOA and global listeners through genuine emotion and heartfelt sincerity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- KOLOM 3: QUOTE SECTION (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col justify-between pl-0 lg:pl-4">
+          <div>
+            <!-- Large Crimson Quote Icon -->
+            <div class="text-rose-600 text-6xl font-serif leading-none mb-4 select-none">
+              &ldquo;
+            </div>
+
+            <!-- Quote Text dengan shimmering "everything" -->
+            <blockquote class="text-gray-300 text-lg sm:text-xl font-light leading-relaxed mb-6">
+              Music is a language that needs no translation. As long as our sincerity is felt, that is 
+              <span class="quote-shimmer italic font-serif font-medium">everything</span>.
+            </blockquote>
+
+            <!-- Handwritten Signature -->
+            <div class="font-script text-4xl sm:text-5xl text-white font-bold tracking-wide mb-8 select-none">
+              Huening Kai
+            </div>
+          </div>
+
+          <!-- Action Tagline -->
+          <div class="border-t border-white/[0.06] pt-6">
+            <a href="#connect-section" class="action-collab-btn group inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-white uppercase hover:text-rose-400 transition-colors">
+              <span>LET'S CREATE SOMETHING UNFORGETTABLE TOGETHER.</span>
+              <span class="text-rose-500 text-sm font-bold group-hover:translate-x-1 transition-transform">+</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         G. FOOTER & LET'S CONNECT (3 Columns: Connect, Socials, Music Player)
+         ==================================================================== -->
+    <section id="connect-section" class="mt-6 pb-16 border-t border-white/[0.06] pt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        
+        <!-- Sisi Kiri: LET'S CONNECT & BUTTON (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col justify-between h-full">
+          <div>
+            <h2 class="font-display font-black text-5xl sm:text-6xl text-white tracking-tight uppercase leading-[0.9]">
+              LET'S<br>CONNECT <span class="text-rose-500 font-light">+</span>
+            </h2>
+            <p class="text-gray-400 text-xs sm:text-sm mt-6 leading-relaxed max-w-sm">
+              Open for global brand collaborations, music features, original soundtracks, and artistic endeavors.
+            </p>
+          </div>
+
+          <div class="mt-8 lg:mt-12">
+            <a href="mailto:bighit@hybe.com?subject=Huening%20Kai%20Collaboration%20Inquiry" class="btn-contact-swipe inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-white/20 text-xs font-bold tracking-[0.2em] uppercase text-white hover:text-white transition-all">
+              <span>CONTACT MANAGEMENT</span>
+              <span class="contact-arrow text-rose-500 font-bold transition-transform duration-300">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom Tengah: 4 KARTU SOSIAL MEDIA (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col space-y-3">
+          
+          <!-- Card 1: HYBE -->
+          <a href="mailto:bighit@hybe.com" class="social-card flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+            <div class="social-icon w-9 h-9 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center flex-shrink-0 text-gray-400 transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-bold block">
+                HYBE / MANAGEMENT
+              </span>
+              <span class="social-text text-xs sm:text-sm text-gray-300 font-medium tracking-wide transition-transform inline-block">
+                bighit@hybe.com
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2: WEVERSE -->
+          <a href="https://weverse.io/txt" target="_blank" rel="noopener noreferrer" class="social-card flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+            <div class="social-icon w-9 h-9 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center flex-shrink-0 text-gray-400 font-bold text-sm transition-all">
+              W
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-bold block">
+                COMMUNITY
+              </span>
+              <span class="social-text text-xs sm:text-sm text-gray-300 font-medium tracking-wide transition-transform inline-block">
+                TXT Official Weverse
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3: INSTAGRAM -->
+          <a href="https://instagram.com/txt_bighit" target="_blank" rel="noopener noreferrer" class="social-card flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+            <div class="social-icon w-9 h-9 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center flex-shrink-0 text-gray-400 transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-bold block">
+                INSTAGRAM
+              </span>
+              <span class="social-text text-xs sm:text-sm text-gray-300 font-medium tracking-wide transition-transform inline-block">
+                @txt_bighit
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4: YOUTUBE -->
+          <a href="https://youtube.com/@TOMORROWXTOGETHER_official" target="_blank" rel="noopener noreferrer" class="social-card flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+            <div class="social-icon w-9 h-9 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center flex-shrink-0 text-gray-400 transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-bold block">
+                OFFICIAL CHANNEL
+              </span>
+              <span class="social-text text-xs sm:text-sm text-gray-300 font-medium tracking-wide transition-transform inline-block">
+                TOMORROW X TOGETHER
+              </span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Kolom Kanan: MUSIC PLAYER CARD (lg:col-span-4) -->
+        <div class="lg:col-span-4">
+          <div class="bg-[#111116] border border-white/[0.08] rounded-2xl p-5 shadow-2xl relative overflow-hidden">
+            
+            <!-- Window Bar (3 Dots & Status) -->
+            <div class="flex items-center justify-between pb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span id="player-indicator-dot" class="blinking-dot w-2 h-2 rounded-full bg-rose-500 opacity-60"></span>
+                <span id="player-status-text" class="text-[10px] font-mono tracking-widest text-gray-400 font-semibold uppercase">
+                  READY TO PLAY
+                </span>
+              </div>
+            </div>
+
+            <!-- Artwork / Display Box -->
+            <div class="my-4 aspect-[16/9] rounded-xl bg-[#09090c] border border-white/[0.04] flex items-center justify-center relative overflow-hidden group">
+              <div class="absolute inset-0 bg-radial-gradient from-rose-600/20 via-transparent to-transparent opacity-60"></div>
+              <div class="text-center relative z-10">
+                <span id="player-artwork-tag" class="font-display font-extrabold text-lg sm:text-xl text-rose-500 tracking-[0.25em]">
+                  FREEFALL // HK
+                </span>
+              </div>
+              <!-- Play/Pause Interactive Button Hover Overlay -->
+              <button id="player-toggle-btn" class="player-toggle absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer" title="Toggle Audio Playback">
+                <div class="w-12 h-12 rounded-full bg-rose-600/90 text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+                  <svg id="player-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            <!-- Song Metadata -->
+            <div>
+              <h4 id="player-song-title" class="text-sm font-bold text-white tracking-wide">
+                THE NAME CHAPTER: FREEFALL
+              </h4>
+              <p id="player-song-subtitle" class="text-xs text-gray-500 mt-0.5">
+                Track 01: Growing Pain
+              </p>
+            </div>
+
+            <!-- Equalizer Bar & Audio Specs -->
+            <div class="flex items-end justify-between mt-5 pt-3 border-t border-white/[0.06]">
+              <!-- Animated Equalizer Bars -->
+              <div id="equalizer-container" class="flex items-end gap-1 h-6">
+                <span class="equalizer-bar"></span>
+                <span class="equalizer-bar"></span>
+                <span class="equalizer-bar"></span>
+                <span class="equalizer-bar"></span>
+                <span class="equalizer-bar"></span>
+              </div>
+
+              <!-- Lossless Audio Tag -->
+              <div class="text-[10px] font-mono tracking-wider text-gray-500">
+                44.1 kHz &bull; Lossless
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FOOTER (Copyright & Experience Credit)
+         ==================================================================== -->
+    <footer class="mt-8 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500 tracking-wider">
+      <div>
+        &copy; 2025 BIGHIT MUSIC / HYBE. All Rights Reserved.
+      </div>
+      <div class="font-mono text-[11px] uppercase tracking-widest text-gray-400">
+        HUENING KAI PORTFOLIO EXPERIENCE
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div id="toast-notification" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-[#181820] border border-rose-500/50 shadow-[0_10px_30px_rgba(225,29,72,0.3)]">
+    <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+    <span id="toast-message" class="text-xs font-medium text-gray-200"></span>
+  </div>
+
+  <!-- Script JS File -->
+  <script src="script.js"></script>
+</body>
+</html>
